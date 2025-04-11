@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>kalkaal Exchange</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="navbar">
+    <div class="nav-container">
+      <div class="logo">
+        <img src="images/logo.png" alt="kalkaal Logo" />
+        <span>kalkaal</span>
+      </div>
+      <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    </div>
+    <nav id="main-nav">
+      <ul>
+        <li><a href="#home" onclick="closeMenu()">Home</a></li>
+        <li><a href="#about" onclick="closeMenu()">About</a></li>
+        <li><a href="#download" onclick="closeMenu()">Download</a></li>
+        <li><a href="#contact" onclick="closeMenu()">Contact</a></li>
+<li><a href="privacy-policy.html" onclick="closeMenu()">Privacy Policy</a></li>
+
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <div class="hero-text">
+        <h1>kalkaal Exchange</h1>
+        <p>0% Fee | EVC Plus | Perfect Money | 1xBet | Zaad | Sahal | e-Dahab</p>
+        <div class="cta-center">
+          <button class="download-btn" onclick="downloadApp()">Download the App</button>
+        </div>
+      </div>
+      <div class="hero-image">
+        <img src="images/1.jpg" alt="App Screenshot" />
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="about">
+    <h2>About kalkaal</h2>
+    <p>kalkaal waa suuq sarifka lacaga qalaad iyo EVCPlus to Perfect Money. Sarif lacagaha 1xBet, Perfect Money, EVC Plus, Sahal, Zaad iyo e-Dahab si bilaash ah (0% fee). Deposit iyo withdraw waa free.</p>
+  </section>
+
+  <section class="section" id="contact">
+    <h2>Contact Us</h2>
+    <p>Email: support@kalkaal.app | Phone: +252 61 2345678</p>
+    <form>
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea placeholder="Your Message" rows="5" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>© 2025 kalkaal Exchange. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,283 @@
+:root {
+  --primary: #0F1C6B;
+  --primary-dark: #0c1758;
+  --light: #f9f9f9;
+  --dark: #1A1A1A;
+  --accent: #ffffff;
+}
+
+html {
+  font-size: 15px;
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: var(--light);
+  color: var(--dark);
+  line-height: 1.6;
+}
+
+/* --- NAVBAR --- */
+.navbar {
+  background: var(--primary);
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 20px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.logo img {
+  height: 36px;
+}
+
+.menu-toggle {
+  font-size: 22px;
+  cursor: pointer;
+  display: block;
+}
+
+/* Mobile nav */
+nav ul {
+  display: none;
+  flex-direction: column;
+  background: var(--primary);
+  width: 100%;
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+nav ul.active {
+  display: flex;
+}
+
+nav ul li {
+  margin: 8px 0;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+/* Desktop nav */
+@media (min-width: 769px) {
+  nav ul {
+    display: flex !important;
+    flex-direction: row;
+    justify-content: flex-end;
+    background: transparent;
+    padding: 0 30px;
+  }
+
+  nav ul li {
+    margin: 0 15px;
+  }
+
+  .menu-toggle {
+    display: none;
+  }
+}
+
+/* --- HERO SECTION --- */
+.hero {
+  background: linear-gradient(120deg, var(--primary) 60%, var(--primary-dark) 100%);
+  color: white;
+  padding: 50px 20px;
+}
+
+.hero-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1100px;
+  margin: auto;
+  gap: 30px;
+}
+
+.hero-text {
+  flex: 1;
+  min-width: 280px;
+}
+
+.hero-text h1 {
+  font-size: 2.2rem;
+  margin-bottom: 15px;
+}
+
+.hero-text p {
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+.cta-center {
+  text-align: left;
+}
+
+@media (max-width: 768px) {
+  .cta-center {
+    text-align: center;
+  }
+}
+
+.download-btn {
+  padding: 12px 24px;
+  font-size: 0.95rem;
+  border: none;
+  border-radius: 50px;
+  background: white;
+  color: var(--primary);
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s ease;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+}
+
+.download-btn:hover {
+  background: #f2f2f2;
+}
+
+/* --- HERO IMAGE --- */
+.hero-image {
+  flex: 1;
+  min-width: 280px;
+  text-align: right;
+}
+
+.hero-image img {
+  width: 280px;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+}
+
+@media (max-width: 768px) {
+  .hero-image {
+    text-align: center;
+  }
+
+  .hero-image img {
+    margin: 0 auto;
+  }
+}
+
+/* --- SECTIONS --- */
+.section {
+  padding: 40px 20px;
+  max-width: 800px;
+  margin: auto;
+  text-align: center;
+}
+
+.section h2 {
+  font-size: 1.6rem;
+  margin-bottom: 16px;
+}
+
+.section p {
+  font-size: 0.95rem;
+}
+
+/* --- FORM --- */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 25px;
+}
+
+form input, form textarea {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 0.95rem;
+}
+
+form button {
+  background: var(--primary);
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+form button:hover {
+  background: var(--primary-dark);
+}
+
+/* --- FOOTER --- */
+footer {
+  background: var(--primary);
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+  font-size: 0.9rem;
+}
+
+/* --- PRIVACY POLICY PAGE --- */
+.privacy-section {
+  max-width: 900px;
+  margin: 60px auto;
+  padding: 20px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.privacy-section h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-align: center;
+  color: var(--primary);
+}
+
+.privacy-section h2 {
+  font-size: 1.3rem;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  color: var(--primary-dark);
+}
+
+.privacy-section p, .privacy-section li {
+  font-size: 0.95rem;
+  color: #333;
+  margin-bottom: 14px;
+  line-height: 1.6;
+}
+
+.privacy-section ul {
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
